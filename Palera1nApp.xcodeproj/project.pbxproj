@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA71626C291AE8E9005ABD85 /* Console.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA71626B291AE8E9005ABD85 /* Console.swift */; };
+		AA71626F291AE95B005ABD85 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA71626E291AE95B005ABD85 /* Color.swift */; };
+		AA716271291AFDC9005ABD85 /* ForegroundLinearGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA716270291AFDC9005ABD85 /* ForegroundLinearGradient.swift */; };
 		CE797597291AD3DF007A38E7 /* Palera1nAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE797596291AD3DF007A38E7 /* Palera1nAppApp.swift */; };
 		CE797599291AD3DF007A38E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE797598291AD3DF007A38E7 /* ContentView.swift */; };
 		CE79759B291AD3E0007A38E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE79759A291AD3E0007A38E7 /* Assets.xcassets */; };
-		CE79759E291AD3E0007A38E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE79759D291AD3E0007A38E7 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA71626B291AE8E9005ABD85 /* Console.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Console.swift; sourceTree = "<group>"; };
+		AA71626E291AE95B005ABD85 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		AA716270291AFDC9005ABD85 /* ForegroundLinearGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForegroundLinearGradient.swift; sourceTree = "<group>"; };
 		CE797593291AD3DF007A38E7 /* Palera1nApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Palera1nApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE797596291AD3DF007A38E7 /* Palera1nAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palera1nAppApp.swift; sourceTree = "<group>"; };
 		CE797598291AD3DF007A38E7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE79759A291AD3E0007A38E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CE79759D291AD3E0007A38E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA71626A291AE8E0005ABD85 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AA71626B291AE8E9005ABD85 /* Console.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		AA71626D291AE94C005ABD85 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AA71626E291AE95B005ABD85 /* Color.swift */,
+				AA716270291AFDC9005ABD85 /* ForegroundLinearGradient.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CE79758A291AD3DF007A38E7 = {
 			isa = PBXGroup;
 			children = (
@@ -53,18 +74,11 @@
 			children = (
 				CE797596291AD3DF007A38E7 /* Palera1nAppApp.swift */,
 				CE797598291AD3DF007A38E7 /* ContentView.swift */,
+				AA71626A291AE8E0005ABD85 /* Classes */,
+				AA71626D291AE94C005ABD85 /* Extensions */,
 				CE79759A291AD3E0007A38E7 /* Assets.xcassets */,
-				CE79759C291AD3E0007A38E7 /* Preview Content */,
 			);
 			path = Palera1nApp;
-			sourceTree = "<group>";
-		};
-		CE79759C291AD3E0007A38E7 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				CE79759D291AD3E0007A38E7 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +139,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE79759E291AD3E0007A38E7 /* Preview Assets.xcassets in Resources */,
 				CE79759B291AD3E0007A38E7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,7 +151,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE797599291AD3DF007A38E7 /* ContentView.swift in Sources */,
+				AA71626F291AE95B005ABD85 /* Color.swift in Sources */,
+				AA71626C291AE8E9005ABD85 /* Console.swift in Sources */,
 				CE797597291AD3DF007A38E7 /* Palera1nAppApp.swift in Sources */,
+				AA716271291AFDC9005ABD85 /* ForegroundLinearGradient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,13 +282,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Palera1nApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 92S6JX27W2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -295,13 +311,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Palera1nApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 92S6JX27W2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
