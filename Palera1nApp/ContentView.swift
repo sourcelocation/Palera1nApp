@@ -16,8 +16,8 @@ struct ContentView: View {
     var body: some View {
         GeometryReader { geo in
             ZStack {
-                LinearGradient(gradient: Gradient(colors: [.init(hex: "071B33"), .init(hex: "833F46"), .init(hex: "FFB123")]), startPoint: .topTrailing, endPoint: .bottomLeading)
-                    .ignoresSafeArea()
+                PaleAnimatedBG().edgesIgnoringSafeArea(.all)
+                    .blur(radius: 45, opaque: true)
                 content
                     .onAppear {
                         self.bounds = geo.size
