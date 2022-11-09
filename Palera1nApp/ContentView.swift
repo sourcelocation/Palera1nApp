@@ -21,7 +21,7 @@ struct ContentView: View {
                 content
                     .onAppear {
                         self.bounds = geo.size
-                        self.splashTimeout = Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false) { _ in
+                        self.splashTimeout = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { _ in
                             withAnimation(.spring()) {
                                 splash = false
                             }
@@ -38,11 +38,12 @@ struct ContentView: View {
     var content: some View {
         VStack {
             titlebar
+                .padding(.top, 20)
             
             consoleview
                 .opacity(splash ? 0 : 1)
                 .frame(maxHeight: splash ? 0 : .infinity)
-                .padding(.horizontal)
+                .padding()
             
             footerbar
                 .opacity(splash ? 0 : 1)
@@ -60,7 +61,7 @@ struct ContentView: View {
                 Image("palera1n-white")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 80)
+                    .frame(width: 64)
                 Text("Palera1n")
                     .font(.system(size: 48, weight: .bold))
             }
@@ -102,16 +103,16 @@ struct ContentView: View {
                 jailbreakpressed()
             } label: {
                 Text("Jailbreak")
-                    .font(.title)
+                    .font(.headline)
                     .foregroundLinearGradient(colors: [.init(hex: "071B33"), .init(hex: "833F46"), .init(hex: "FFB123")], startPoint: .leading, endPoint: .trailing)
                     .frame(maxWidth: .infinity)
                     .padding()
                     .background {
-                        RoundedRectangle(cornerRadius: 20, style: .continuous)
+                        RoundedRectangle(cornerRadius: 12, style: .continuous)
                     }
             }
             .buttonStyle(.plain)
-            .padding()
+            .padding(.horizontal)
         }
     }
     
