@@ -31,6 +31,8 @@ struct ContentView: View {
         }
     }
     
+    @State var isJailbreaking: Bool = false
+    
     @State var splash = true
     @State var splashTimeout: Timer? = nil
     
@@ -43,7 +45,8 @@ struct ContentView: View {
             consoleview
                 .opacity(splash ? 0 : 1)
                 .frame(maxHeight: splash ? 0 : .infinity)
-                .padding()
+                .padding(.horizontal)
+                .padding(.top)
             
             footerbar
                 .opacity(splash ? 0 : 1)
@@ -66,8 +69,9 @@ struct ContentView: View {
                     .font(.system(size: 48, weight: .bold))
             }
             .padding(8)
-            Text("By nebula, mineek, nathan")
-                .font(.body)
+            Text("Team: nebula, mineek, nathan\nApp: sourceloc & llsc12")
+            .font(.footnote)
+                .multilineTextAlignment(.center)
         }
     }
     
@@ -80,6 +84,7 @@ struct ContentView: View {
                 }
             }
         }
+        .padding()
         .frame(maxWidth: .infinity, maxHeight: splash ? 0 : ( bounds?.height ?? 1 / 1.9 ))
         .background(Color("CellBackground"))
         .cornerRadius(20)
@@ -91,6 +96,7 @@ struct ContentView: View {
         HStack {
             Text(item.string)
                 .foregroundColor(Console.logTypeToColor(item.type))
+                .font(.custom("Menlo", size: 13))
             Spacer()
         }
     }
@@ -100,10 +106,11 @@ struct ContentView: View {
         // buttons
         VStack {
             Button {
+                isJailbreaking = true
                 jailbreakpressed()
             } label: {
                 Text("Jailbreak")
-                    .font(.headline)
+                    .font(.body)
                     .foregroundLinearGradient(colors: [.init(hex: "071B33"), .init(hex: "833F46"), .init(hex: "FFB123")], startPoint: .leading, endPoint: .trailing)
                     .frame(maxWidth: .infinity)
                     .padding()
@@ -113,12 +120,20 @@ struct ContentView: View {
             }
             .buttonStyle(.plain)
             .padding(.horizontal)
+            .disabled(isJailbreaking)
         }
     }
     
     
     func jailbreakpressed() {
+        #warning("Jailbreak implementation here")
+        console.log("Jailbreak currently not implemented")
         
+        Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: { timer in
+            withAnimation(.easeInOut) {
+                isJailbreaking = false
+            }
+        })
     }
 }
 
